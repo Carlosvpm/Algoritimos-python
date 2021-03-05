@@ -1,2 +1,2 @@
 # Exercicios
-Repositório para praticar estudar programação
+ :fire: Repositório para praticar estudar programação
