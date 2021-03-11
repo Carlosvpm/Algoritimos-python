@@ -1,4 +1,4 @@
-# Lista para cardápio:
+# Lista para cardápio [código_do_produto, nome_do_produto, preço]:
 produtos = [[100, "cachorro-quente", 4.50], [101, "Hamburger", 5.00], [102, "Misto", 2.75], [103, "Refrigerante", 3.50]]
 
 #lista produtos comprados
@@ -21,6 +21,7 @@ def adicionar_preço():
         if codigo_digitado == x[0]:
             preço = x[2]
             preço_produtos_comprados.append(x[2])
+
 # Função adicionar nome dos produtos comprados na respectiva lista:
 def adicionar_nomes():
     for x in produtos:
@@ -33,15 +34,15 @@ codigo_digitado = int(input("Código do produto: "))
 buscar_produtos()
 adicionar_preço()
 adicionar_nomes()
-resposta = input("Deseja continuar?")
+adicionar_algo = input("Deseja adicionar algo mais? ")
 
 #Quando quiser adicionar mais pedidos
-while resposta == "sim":
+while adicionar_algo == "sim":
     codigo_digitado = int(input("Código do produto: "))
     buscar_produtos()
     adicionar_preço()
     adicionar_nomes()
-    resposta = input("Deseja continuar?")
+    adicionar_algo = input("Deseja adicionar algo mais? ")
 else:
-    print(f"Valor total a pagar: {sum(preço_produtos_comprados)}")
     print(nome_produtos_comprados)
+    print(f"Valor total a pagar: {sum(preço_produtos_comprados)}")
